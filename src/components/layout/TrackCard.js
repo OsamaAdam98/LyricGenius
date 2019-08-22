@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 export default function TrackCard(props) {
 	const {track} = props;
@@ -9,13 +10,14 @@ export default function TrackCard(props) {
 					<h5 className="display-4">{track.track_name}</h5>
 					<ul className="list-group list-group-flush">
 						<li className="list-group-item pl-0">
-							<strong>Album name</strong>: {track.album_name}
+							<strong>Album</strong>: {track.album_name}
 						</li>
 						<li className="list-group-item pl-0">
 							<strong>Artist</strong>: {track.artist_name}
 						</li>
 					</ul>
 				</div>
+					<Link to={`lyrics/${track.track_id}`} className = "btn btn-dark">Lyrics</Link>
 			</div>
 		</div>
 	);

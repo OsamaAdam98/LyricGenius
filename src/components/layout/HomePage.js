@@ -12,25 +12,30 @@ export default function HomePage() {
 		setIsLoading(true);
 		axios
 			.get(
-				`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=10&country=eg&apikey=${
+				`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=10&country=us&apikey=${
 					process.env.REACT_APP_KEY
 				}`
 			)
-			.then((res) => setTrackList(res.data.message.body.track_list))
-			.then(setIsLoading(false));
+			.then((res) => {
+				setTrackList(res.data.message.body.track_list);
+				setIsLoading(false);
+			})
+			.catch((err) => console.log(err));
 	}, []);
 
-	const trackCard = trackList.map((trackn) => (
-		<TrackCard track={trackn.track} key={trackn.track.track_id} />
+	const trackCard = trackList.map((item) => (
+		<TrackCard track={item.track} key={item.track.track_id} />
 	));
 
 	if (isLoading) {
 		return <LoadingPage />;
 	}
 	return (
-		<div>
-			{console.log(trackList)}
-			{trackCard}
+		<div className="container-fluid">
+			<div className="row">
+				{trackCard}
+				{trackList.length ? console.log(trackList) : null}
+			</div>
 		</div>
 	);
 }

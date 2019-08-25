@@ -7,7 +7,7 @@ export default function TrackCard(props) {
 		<div className="col-md-6 mb-3">
 			<div className="card shadow-sm">
 				<div className="card-body ">
-					<h5 className="display-4">{track.track_name}</h5>
+					<h3>{track.track_name}</h3>
 					<ul className="list-group list-group-flush">
 						<li className="list-group-item pl-0">
 							<strong>Album</strong>: {track.album_name}
@@ -17,7 +17,9 @@ export default function TrackCard(props) {
 						</li>
 					</ul>
 				</div>
-					<Link to={`lyrics/${track.track_id}`} className = "btn btn-dark">Lyrics</Link>
+				<Link to={`lyrics/${track.track_id}`} className="btn btn-dark">
+					Lyrics
+				</Link>
 			</div>
 		</div>
 	);

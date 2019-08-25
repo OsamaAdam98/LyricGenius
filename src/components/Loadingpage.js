@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function LoadingPage() {
+export default function Loadingpage() {
 	return (
 		<div className="justify-content-center d-flex">
 			<div

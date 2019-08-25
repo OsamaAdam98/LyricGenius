@@ -52,9 +52,7 @@ export default function Lyrics(props) {
 		</React.Fragment>
 	));
 
-	if (isLoading) {
-		return <Loadingpage />;
-	}
+	if (isLoading) return <Loadingpage />;
 	return (
 		<div className="container-fluid">
 			<div className="display-4 text-center">{trackName}</div>

@@ -2,7 +2,7 @@ import React from "react";
 import {Link} from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Search from "../Search";
+import Search from "./Search";
 
 export default function NavBar() {
 	return (

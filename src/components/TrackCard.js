@@ -17,7 +17,10 @@ export default function TrackCard(props) {
 						</li>
 					</ul>
 				</div>
-				<Link to={`lyrics/${track.track_id}`} className="btn btn-dark">
+				<Link
+					to={`/lyrics/${track.track_id}`}
+					className={`btn btn-dark ${track.has_lyrics ? "" : "disabled"}`}
+				>
 					Lyrics
 				</Link>
 			</div>

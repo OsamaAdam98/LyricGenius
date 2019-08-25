@@ -11,16 +11,18 @@ function Search(props) {
 		setSearchState(value);
 	};
 
-	const handleSubmit = () => {
+	const handleSubmit = (event) => {
 		if (searchState.trim()) props.history.push(direction);
-		else props.history.push(`/`);
+		else {
+			event.preventDefault();
+		}
 	};
 
 	return (
 		<React.Fragment>
 			<form className="form-inline" onSubmit={handleSubmit}>
 				<input
-					className="form-control mr-sm-2"
+					className={`form-control mr-sm-2`}
 					type="search"
 					placeholder="Search.."
 					value={searchState}
@@ -28,7 +30,7 @@ function Search(props) {
 				/>
 				<button
 					onClick={handleSubmit}
-					className="form-control btn btn-outline-light"
+					className={`form-control btn btn-outline-light`}
 				>
 					Search
 				</button>

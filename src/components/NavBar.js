@@ -16,7 +16,7 @@ export default function NavBar() {
 			>
 				<Navbar.Brand>
 					<Link to="/" className="navbar-brand">
-						LyricGenius
+						LyricsGenius
 					</Link>
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />

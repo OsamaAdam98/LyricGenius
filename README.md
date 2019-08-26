@@ -1,7 +1,6 @@
 # LyricsGenius
 
-Lyrics lookup app built using Musixmatch's api.
+A showcase using Musixmatch's developer api.
 
-This app is a showcase and not meant for actual use.
-
-Check the heroku deployment [here](https://lyricsgenius.herokuapp.com)
+This app is using Musixmatch's free api so it's not to be used as a legitimate lyrics search app, if you want the full functionality you may want to checkout Musixmatch.
+However, this app was written as a practice to get better at writing reactjs.

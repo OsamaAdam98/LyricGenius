@@ -3,12 +3,21 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
+<<<<<<< HEAD
 		"bootstrap": "^4.4.1",
 		"react": "^16.12.0",
 		"react-bootstrap": "^1.0.0-beta.16",
 		"react-dom": "^16.12.0",
 		"react-router-dom": "^5.1.2",
 		"react-scripts": "^3.3.0"
+=======
+		"bootstrap": "^4.3.1",
+		"react": "^16.11.0",
+		"react-bootstrap": "^1.0.0-beta.14",
+		"react-dom": "^16.11.0",
+		"react-router-dom": "^5.1.2",
+		"react-scripts": "3.1.1"
+>>>>>>> be9f6f76faeba7f12550049c15e51bfc5abbb0a7
 	},
 	"scripts": {
 		"start": "react-scripts start",
